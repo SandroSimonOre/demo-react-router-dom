@@ -1,14 +1,16 @@
-import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import './index.css'
 
-function App() {
-
+export default function App() {
+  
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <div>Hello!</div>
+    }
+  ])
+  
   return (
-    <>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <RouterProvider router={router} />
   )
 }
-
-export default App
