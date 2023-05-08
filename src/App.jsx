@@ -8,14 +8,14 @@ import { AssetsAccounts } from './pages/AssetsAccounts'
 import { LiabilitiesAccounts} from './pages/LiabilitiesAccounts'
 import { ExpenseAccounts } from './pages/ExpenseAccounts'
 import { IncomeAccounts } from './pages/IncomeAccounts'
-import { MainLayout } from './components/MainLayout'
+import { Layout } from './components/Layout'
 
 export default function App() {
   
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <MainLayout />,
+      element: <Layout />,
       children: [
         {
           index: true,
