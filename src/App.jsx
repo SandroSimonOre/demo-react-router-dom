@@ -35,6 +35,9 @@ export default function App() {
           children: [
             {
               index: true,
+              element: <AllAccounts />
+            },
+            {
               path: 'all-accounts',
               element: <AllAccounts />
             },
