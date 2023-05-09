@@ -10,6 +10,10 @@ import { ExpenseAccounts } from './pages/ExpenseAccounts'
 import { IncomeAccounts } from './pages/IncomeAccounts'
 import { Layout } from './components/Layout'
 
+import { Accounts } from './pages/Accounts'
+import { Transactions } from './pages/Transactions'
+import { Reports } from './pages/Reports'
+
 export default function App() {
   
   const router = createBrowserRouter([
@@ -19,19 +23,19 @@ export default function App() {
       children: [
         {
           index: true,
-          element: <CreateTransaction />
+          element: <Transactions />
         },
         {
-          path: 'create-transaction',
-          element: <CreateTransaction />
+          path: 'transactions',
+          element: <Transactions />
         },
         {
-          path: 'create-account',
-          element: <CreateAccount />
+          path: 'accounts',
+          element: <Accounts />
         },
         {
-          path: 'browse-accounts',
-          element: <BrowseAccounts />,
+          path: 'Reports',
+          element: <Reports />,
           children: [
             {
               index: true,
@@ -40,23 +44,7 @@ export default function App() {
             {
               path: 'all-accounts',
               element: <AllAccounts />
-            },
-            {
-              path: 'assets-accounts',
-              element: <AssetsAccounts />
-            },
-            {
-              path: 'liabilities-accounts',
-              element: <LiabilitiesAccounts />
-            },
-            {
-              path: 'income-accounts',
-              element: <IncomeAccounts />
-            },
-            {
-              path: 'expense-accounts',
-              element: <ExpenseAccounts />
-            },
+            }
             
           ]
         }
