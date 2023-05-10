@@ -14,6 +14,8 @@ import { Accounts } from './pages/Accounts'
 import { Transactions } from './pages/Transactions'
 import { Reports } from './pages/Reports'
 
+import { GlobalProvider } from './context/GlobalState'
+
 export default function App() {
   
   const router = createBrowserRouter([
@@ -53,7 +55,7 @@ export default function App() {
   ])
   
   return (
-    
+     
       <RouterProvider router={router} />
     
   )

@@ -1,5 +1,9 @@
+import { useGlobalState } from "../context/GlobalState"
+
 export const Menu = () => {
     
+    const { showMenu } = useGlobalState()
+    //console.log(menuStatus)
     const menuItems = [
 
         'Create transaction',
@@ -9,7 +13,7 @@ export const Menu = () => {
     ]
 
     return (
-        <div className='border w-5/6 p-2'>
+        <div className={`border w-5/6 p-2 ${showMenu ? '' : 'hidden'}`}>
             <ul>
                 {
                     menuItems.map( e => (
